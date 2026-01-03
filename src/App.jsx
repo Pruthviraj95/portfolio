@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
@@ -15,6 +15,7 @@ function App() {
       <CustomCursor />
       <div className="relative z-0 bg-primary w-full min-h-screen">
         <Navbar />
+        <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -23,6 +24,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        </HashRouter>
       </div>
     </Router>
   );
